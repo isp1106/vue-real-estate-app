@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <img :src="원룸.image">
+    <h2 @click="send">{{원룸.title}}</h2>
+    <p>{{원룸.content}}</p>
+    <p>{{원룸.price}} 원</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'CardBox',
+  props: {
+    원룸 : Object,
+  },
+  methods:{
+    send() {
+      this.$emit('openModal', this.원룸.id)
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>>
